@@ -11,6 +11,14 @@ describe Account do
     it 'increases the balance' do
       expect { account.deposit(1) }.to change { account.balance }.by(1)
     end
-
   end
+
+  describe '#withraw' do
+    it 'decreases the balance' do
+      account.deposit(30)
+      expect { account.withdraw(1) }.to change { account.balance }.by(-1)
+    end
+  end
+
+
 end
