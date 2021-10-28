@@ -1,9 +1,13 @@
+require_relative 'statement'
+require_relative 'transaction'
+
 class Account
+  attr_reader :balance, :transactions
 
-  attr_reader :balance
-
-  def initialize
+  def initialize (statement = Statement.new, transaction = Transaction)
     @balance = 0
+    @transactions = []
+    @statement = statement
   end
 
   def deposit(amount)
@@ -12,6 +16,10 @@ class Account
 
   def withdraw(value)
     @balance -= value
+  end
+
+  def history
+    @statement.print(@transactions)
   end
 
 end
