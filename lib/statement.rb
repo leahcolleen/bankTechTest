@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 # prints a list of transactions
 
 class Statement
-
   def print(transactions)
     @transactions = transactions
     puts(statement_titles + print_transactions)
@@ -21,8 +22,6 @@ class Statement
   end
 
   def format(num)
-    num === 0 ? "" : '%.2f' % num
+    num === 0 ? '' : '%.2f' % num
   end
-  
-
 end
