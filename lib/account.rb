@@ -22,4 +22,8 @@ class Account
     @statement.print(@transactions)
   end
 
+  def save(transaction)
+    @transactions << transaction
+  end
+
 end

@@ -8,7 +8,6 @@ class Statement
   end
 
   # private
-
   def statement_titles
     "date || credit || debit || balance\n"
   end

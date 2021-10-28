@@ -2,5 +2,9 @@
 
 source "https://rubygems.org"
 
-
-gem "rspec"
+group :test do
+  gem 'rubocop'
+  gem "rspec"
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
+end
